@@ -20,3 +20,16 @@ for (int i = 0; i < rows; i++)
     return str;
 }    
 
+void PrintArray(char[,] mas)
+{
+    for (int i = 0; i < mas.GetLength(0); i++)
+    {
+        for (int j = 0; j < mas.GetLength(1); j++)
+        {
+            Console.Write($"{mas[i, j]} [{i},{j}] ");
+        }
+        Console.WriteLine();
+    }
+}
+
+
