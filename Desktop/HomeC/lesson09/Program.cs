@@ -33,7 +33,7 @@ void PrintArray(char[,] mas)
 }
 
 char[] ArraySymbol(char[,] array2D)
-{//определить количество символов в array2D для размерности нового массива
+{//определить количество символов (исключая цифры)  в array2D для размерности нового массива
     int count = 0;
     for (int i = 0; i < array2D.GetLength(0); i++)
     {
@@ -45,7 +45,7 @@ char[] ArraySymbol(char[,] array2D)
                 count++;
         }
     }
-  //конец определить количество символов в array2D для размерности нового массива
+  //конец определить количество символов(исключая цифры) в array2D для размерности нового массива
     Console.WriteLine();
     Console.WriteLine("Результирующий массив");
     char[] array1D = new char[count];
@@ -59,7 +59,7 @@ char[] ArraySymbol(char[,] array2D)
             else
             {
                 array1D[k] = array2D[i, j];
-                Console.Write($"{array1D[k]}({k}) ");
+                Console.Write($"{array1D[k]} [{k}] ");
                 k++;
             }
         }
@@ -67,7 +67,6 @@ char[] ArraySymbol(char[,] array2D)
     }
     return array1D;
 }
-
 
 char[,] matrix = ArrayChar();
 Console.WriteLine("Входной массив ");
