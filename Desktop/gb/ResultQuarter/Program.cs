@@ -10,8 +10,9 @@
 ["Russia", "Denmark", "Kazan"] → []
 */
 
-void NewMassiv(string[] array1, string[] array2)
+string[] NewMassiv(string[] array1)
 {
+    string[] array2=new string[array1.Length];
     int count = 0;
     for (int i = 0; i < array1.Length; i++)
     {
@@ -21,6 +22,7 @@ void NewMassiv(string[] array1, string[] array2)
         count++;
         }
     }
+    return array2;
 }
 
 void PrintArray(string[] mas)
@@ -32,9 +34,9 @@ void PrintArray(string[] mas)
     Console.WriteLine();
 }
 
-string[] array1 = new string[4] {"Hello", "2", "world", ":-)"};
-//string[] array1 = new string[4] {"1234", "1567", "-2", "computer science"};
+//string[] array1 = new string[4] {"Hello", "2", "world", ":-)"};
+string[] array1 = new string[4] {"1234", "1567", "-2", "computer science"};
 //string[] array1 = new string[3] {"Russia", "Denmark", "Kazan"};
-string[] array2 = new string[array1.Length];
-NewMassiv(array1, array2);
-PrintArray(array2);
+
+string [] arrayFinal=NewMassiv(array1);
+PrintArray(arrayFinal);
