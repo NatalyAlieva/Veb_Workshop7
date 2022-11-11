@@ -10,7 +10,7 @@
 ["Russia", "Denmark", "Kazan"] → []
 */
 
-string[] NewMassiv(string[] array1)
+string[] NewArray(string[] array1)
 {
     string[] array2=new string[array1.Length];
     int count = 0;
@@ -38,5 +38,5 @@ void PrintArray(string[] mas)
 string[] array1 = new string[4] {"1234", "1567", "-2", "computer science"};
 //string[] array1 = new string[3] {"Russia", "Denmark", "Kazan"};
 
-string [] arrayFinal=NewMassiv(array1);
+string [] arrayFinal=NewArray(array1);
 PrintArray(arrayFinal);
